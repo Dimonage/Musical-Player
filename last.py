@@ -2,8 +2,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5.QtCore import QUrl, QAbstractListModel, Qt
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaPlaylist, QMediaContent
 from last_py import Ui_MainWindow
-#http://qaru.site/questions/1246590/pyqt-proper-use-of-emit-and-pyqtsignal
-#https://www.tutorialspoint.com/python3/string_zfill.htm
+
 
 
 def hhmmss(ms):
@@ -42,7 +41,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timeSlider.valueChanged.connect(self.player.setPosition)
 
         self.open_file_action.triggered.connect(self.open)
-        #self.setAcceptDrops(True)
+        
 
     def handle_shuffle(self):
         self.playlist.shuffle()
